@@ -1,4 +1,8 @@
 '''
+Problem #2 in "Fifty Challenging Problems in Probability" by Frederick Mosteller.
+
+Successive Wins
+
 To encourage Elmer's promising tennis career, his father offers him a prize if he wins at least (at least) two tennis
 sets in a row in a three-set series to be played with his father and the club champion alternatively:
 father-champion-father, or champion-father-champion, according to Elmer's choice. The champion is a better player
