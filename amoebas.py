@@ -6,30 +6,21 @@ What is the probability that Bobo’s lineage dies out?
 
 import random
 
-def get_num_offspring():
-    num = random.random()
-    if num < .25:
-        return 0
-    if num < .50:
-        return 1
-    else:
-        return 2
+OFFSPRING = (0, 1, 2, 2)
 
-n_sims = 10**4
+n_sims = 10**6
 n_lineage_dead = 0
 # How many amoebas should reproduce before we conclude the lineage will live on?
-min_amoebas = 500
+min_amoebas = 20
 
 for _ in range(n_sims):
-    n_amoebas_reproduced = 0
     amoebas = [1]
-    while amoebas and n_amoebas_reproduced < min_amoebas:
+    while amoebas and len(amoebas) < min_amoebas:
         amoebas.pop()
-        n_amoebas_reproduced += 1
-        for _ in range(get_num_offspring()):
+        for _ in range(random.choice(OFFSPRING)):
             amoebas.append(1)
     if len(amoebas) == 0:
         n_lineage_dead += 1
-
+        
 # Goal is to see percentage of time the lineage died out. Answer approximates 50%.
 print(n_lineage_dead/n_sims)
