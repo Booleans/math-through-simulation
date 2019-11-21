@@ -7,14 +7,14 @@ This should work out to approximately 1-(1/e) = .632. Let's use a deck of 100 ca
 '''
 import numpy as np
 
-n_trials = 10**5
+n_trials = 10**6
 
 cards = np.array(range(100))
 indices = np.array(range(100))
 # Trials is a matrix with dimensions (n_trials, 100) where each row is the shuffled numbers 0 through 99.
-trials = np.concatenate([np.random.choice(cards, size=100, replace=False).reshape(1, 100) for _ in range(n_trials)], axis=0)
+trials = np.random.random((n_trials, n_cards)).argsort()
 # A match is where the card number is equal to its index position.
 matches = np.any(trials == indices, axis=1)
 
 p_winning = np.sum(matches)/n_trials
-p_winning # ~0.63116
+p_winning # ~0.631867
