@@ -1,5 +1,8 @@
 '''
-FILL THIS IN
+You are trapped in a dark cave with three indistinguishable exits on the walls. One exit takes you 3 hours to travel and 
+takes you outside. One of the other exits takes 1 hour to travel and the other takes 2 hours, but both drop you back
+in the original cave through the ceiling, which is unreachable from the floor of the cave. You have no way of marking which
+exits you've attempted. What is the expected time it takes for you to get outside?
 '''
 
 import random
