@@ -14,7 +14,7 @@ import numpy as np
 n_trials = 10**8
 # Generate an array with n_trials number of rows and 2 columns.
 # The first column represent the x coordinate of the coin's center and the second column is the y coordinate. 
-toss_coordinates = np.random.random(size=2*n_trials).reshape(n_trials,2)
+toss_coordinates = np.random.random((n_trials, 2))
 # With a radius of 3/8 the coin will be in-bounds if both center coordinates are > 3/8 while < 5/8.
 in_bounds = (toss_coordinates > 3/8) & (toss_coordinates < 5/8)
 wins = np.all(in_bounds, axis=1)
