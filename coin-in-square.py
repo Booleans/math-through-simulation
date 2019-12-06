@@ -3,9 +3,9 @@ Problem #5 in "Fifty Challenging Problems in Probability" by Frederick Mosteller
 
 Coin in Square
 
-In a common carnival game a player tosses a penny from a distance of about 5 onto the surface of a table ruled in 1 inch squares.
-If the penny (3/4 inch in diameter) falls entirely inside a square, the player receives 5 cents but does not get his penny
-back; otherwise he loses his penny. If the penny lands on the table, what are his chances of winning?
+In a common carnival game a player tosses a penny from a distance of about 5 feet onto the surface of a table ruled in 1-inch 
+squares. If the penny (3/4 inch in diameter) falls entirely inside a square, the player receives 5 cents but does not get
+his penny back; otherwise he loses his penny. If the penny lands on the table, what are his chances of winning?
 
 Solving by hand yields 1/16, let's simulate to confirm. 
 '''
