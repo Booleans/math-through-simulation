@@ -9,7 +9,19 @@ back; otherwise he loses his penny. If the penny lands on the table, what are hi
 
 Solving by hand yields 1/16, let's simulate to confirm. 
 '''
+import numpy as np
 
+n_trials = 10**8
+# Generate an array with n_trials number of rows and 2 columns.
+# The first column represent the x coordinate of the coin's center and the second column is the y coordinate. 
+toss_coordinates = np.random.random(size=2*n_trials).reshape(n_trials,2)
+# With a radius of 3/8 the coin will be in-bounds if both center coordinates are > 3/8 while < 5/8.
+in_bounds = (toss_coordinates > 3/8) & (toss_coordinates < 5/8)
+wins = np.all(in_bounds, axis=1)
+np.sum(wins)/n_trials # 0.0625051, ~1/16
+
+# Commenting out the old Python solution to instead use the above numpy solution.
+'''
 import random
 
 n_sims = 10**7
@@ -32,3 +44,4 @@ for _ in range(n_sims):
 
 print(n_success/n_sims)
 # .0625252, ~1/16
+'''
