@@ -1,7 +1,7 @@
 '''
 Problem #19 in "Fifty Challenging Problems in Probability" by Frederick Mosteller.
 
-Isaac Newtown Helps Samuel Pepys
+Isaac Newton Helps Samuel Pepys
 
 Pepys wrote to Newton to ask which of 3 events is more likely: that a person (a) gets at least 1 six when 6 dice are rolled,
 (b) at least 2 sixes when 12 dice are rolled, or (c) at least 3 sixes when 18 dice are rolled? What is the answer?
