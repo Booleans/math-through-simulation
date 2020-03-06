@@ -3,7 +3,7 @@ Problem #34 in "Fifty Challenging Problems in Probability" by Frederick Mostelle
 
 Birthday Holidays
 
-Labor laws in Erewhon require factory ownesr to give every worker a holiday whenever one of them has a birthday and to hire
+Labor laws in Erewhon require factory owners to give every worker a holiday whenever one of them has a birthday and to hire
 without discrimination on the grounds of birthdays. Except for these holidays they work a 365-day year. The owners want to 
 maximize the expected total number of man-days worked per year in a factory. How many workers do factories have in Erewhon?
 '''
