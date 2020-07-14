@@ -7,13 +7,15 @@ He then says to you, "Do you want to pick door No. 2?" Is it to your advantage t
 import numpy as np
 
 def monty_hall(switching=True, n_games=10**7):
-    door_choices = np.random.randint(0, 3, size=n_games)
-    door_correct = np.random.randint(0, 3, size=n_games)
+    # We can use a Bernoulli distribution (Binomial with 1 trial) to generate a 1 or 0 that represents
+    # whether or not the prize door was selected as the first guess.
+    prize_door_selected = np.random.binomial(1, 1/3, size=n_games)
 
     if switching:
-        return np.sum(door_choices != door_correct)/n_games
+        # When switching you win if the prize door was not your first selection.
+        return np.mean(np.logical_not(prize_door_selected))
     else: 
-        return np.sum(door_choices == door_correct)/n_games
+        return np.mean(prize_door_selected)
 
 print(monty_hall(switching=True)) # ~.666
 print(monty_hall(switching=False)) # ~.333
