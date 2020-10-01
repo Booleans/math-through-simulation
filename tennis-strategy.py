@@ -20,8 +20,8 @@ p_father = .40
 p_champ  = .30
 n_sims = 10**7
 
-p_FCF = [p_father, p_champ, p_father]
-p_CFC = [p_champ, p_father, p_champ]
+p_FCF = (p_father, p_champ, p_father)
+p_CFC = (p_champ, p_father, p_champ)
 
 games = np.random.binomial(n=1, p=p_FCF, size=(n_sims, 3))
 # Elmer wins by winning the middle game and at least 2 total games.
