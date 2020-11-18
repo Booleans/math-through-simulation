@@ -14,3 +14,17 @@ n_sims = 10**6
 sims = np.random.randint(5, size=(n_sims, 4))
 n_unique_floors = np.apply_along_axis(lambda x: np.unique(x).size, axis=1, arr=sims)
 np.mean(n_unique_floors == 4) # ~0.19195
+
+# Alternative solution without numpy appears faster.
+
+import random
+
+n_sims = 10**6
+all_unique = 0
+
+for _ in range(n_sims):
+    distinct_floors = {random.randint(1, 5) for _ in range(4)}
+    if len(distinct_floors) == 4:
+        all_unique += 1
+        
+all_unique/n_sims
