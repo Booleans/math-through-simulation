@@ -21,8 +21,4 @@ overlap_percentage = np.mean(np.abs(process_1 - process_2) <= 3_600)
 annual_cost = overlap_percentage * 365 * 1000
 ```
 
-#### For My Students:
-
-Please first attempt to find the closed-form solution with pen and paper. Afterwards, confirm your solution through simulation. I would prefer you use vectorized NumPy operations for speed and efficiency. However, if you are still uncomfortable "thinking in NumPy" then you are welcome to use pure Python and we can discuss how your code might be modified. 
-
 ![NumPy Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/NumPy_logo.svg/2000px-NumPy_logo.svg.png)
