@@ -2,7 +2,7 @@
 # Unfortunately, when the jobs simultaneously run, they cause a failure in some of the other company’s nightly jobs, 
 # resulting in downtime for the company that costs $1,000. 
 
-# The CEO needs you to tell her the annual cost of this issue. 
+# The CEO needs you to tell her the annual cost of this issue. Write a simulation to approximate the annual cost. 
 
 import numpy as np
 
